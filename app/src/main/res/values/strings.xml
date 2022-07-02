@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WorkManager-Example</string>
+    <string name="content">Content</string>
+    <string name="initial_delay">Initial delay</string>
+    <string name="create_one_time_work">create one time work</string>
+    <string name="overwritinginputmerger">OverwritingInputMerger</string>
+    <string name="arraycreatinginputmerger">ArrayCreatingInputMerger</string>
+    <string name="create_chain">create chain</string>
+    <string name="is_network_required">is network required?</string>
+    <string name="is_charging_required">is charging required?</string>
+</resources>

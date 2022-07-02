@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"/>
+
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="a1 = "
+        app:layout_constraintBottom_toBottomOf="@id/a1TextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/a1TextInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/a1TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@id/guidline"
+        app:layout_constraintStart_toEndOf="@id/a1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/a1EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="b1 = "
+        android:layout_marginStart="4dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/a1TextInputLayout"
+        app:layout_constraintStart_toEndOf="@id/guidline"
+        app:layout_constraintTop_toTopOf="@id/a1TextInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/b1TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/b1"
+        app:layout_constraintTop_toTopOf="@id/a1TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/b1EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a2 = "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/a2TextInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/a2TextInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/a2TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@id/guidline"
+        app:layout_constraintStart_toEndOf="@id/a2"
+        app:layout_constraintTop_toBottomOf="@id/b1TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/a2EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="b2 = "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/a2TextInputLayout"
+        app:layout_constraintStart_toEndOf="@id/guidline"
+        app:layout_constraintTop_toTopOf="@id/a2TextInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/b2TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/b2"
+        app:layout_constraintTop_toTopOf="@id/a2TextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/b2EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/inputMergerGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/overwriting"
+        app:layout_constraintTop_toBottomOf="@id/b2TextInputLayout">
+
+        <RadioButton
+            android:id="@+id/overwriting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overwritinginputmerger"/>
+
+        <RadioButton
+            android:id="@+id/arrayCreating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/arraycreatinginputmerger"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/isNetworkRequired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/is_network_required"
+        app:layout_constraintTop_toBottomOf="@id/inputMergerGroup"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/isChargingRequired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/is_charging_required"
+        app:layout_constraintTop_toBottomOf="@id/isNetworkRequired"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/createChain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_chain"
+        app:layout_constraintTop_toBottomOf="@id/isChargingRequired"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/createChain"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
